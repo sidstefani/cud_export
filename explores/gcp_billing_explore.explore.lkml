@@ -1,3 +1,6 @@
+include: "/views/cud_export.view.lkml"
+include: "/views/gcp_billing/gcp_billing_export.view"
+
 explore: gcp_billing_export {
   label: "Billing"
   join: gcp_billing_export__labels {
