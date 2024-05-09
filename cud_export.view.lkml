@@ -1,6 +1,6 @@
 view: cud_export {
   view_label: "CUD Export"
-  sql_table_name: `@{CUDEXPORT}` ;;
+  sql_table_name: `@{CUD_EXPORT}` ;;
 
   dimension: active_commitment {
     type: number
