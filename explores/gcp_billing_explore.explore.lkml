@@ -26,6 +26,6 @@ explore: gcp_billing_export {
   join: cud_export {
     type: left_outer
     sql_on: ${gcp_billing_export.subscription_id} = ${cud_export.subscription_id} ;;
-    relationship: one_to_many
+    relationship: many_to_one
   }
 }
