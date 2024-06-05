@@ -2,6 +2,10 @@ view: cud_export {
   view_label: "CUD Export"
   sql_table_name: `@{CUD_EXPORT}` ;;
 
+  view: cud_export {
+  view_label: "CUD Export"
+  sql_table_name: `eaf-barong-da-qa.cud.cud_export` ;;
+
   dimension: active_commitment {
     type: number
     hidden: yes
@@ -104,17 +108,10 @@ view: cud_export {
     sql: ${TABLE}.Subscription_Container ;;
   }
 
-  dimension: subscription {
-    type: string
-    hidden:  yes
-    description: "A field used to identify the subscription ID."
-    sql: ${TABLE}.Subscription_Id ;;
-  }
-
   dimension: subscription_id {
     type: string
     description: "A unique identifier for the commitment."
-    sql: SPLIT(${subscription}, '/')[OFFSET(1)] ;;
+    sql: ${TABLE}.Subscription_Id ;;
   }
 
   dimension: subscription_name {
